@@ -1,0 +1,170 @@
+
+
+ASSIGNMENTS:02
+
+p14
+Check if a number is perfect square.
+#include <stdio.h>
+#include <math.h>  // For sqrt() function
+
+// Function to check if a number is a perfect square
+int isPerfectSquare(int n) {
+    if (n < 0) {
+        return 0;  // Negative numbers cannot be perfect squares
+    }
+
+    int root = sqrt(n);  // Find the square root of n
+    return (root * root == n);  // If the square of root equals n, it's a perfect square
+}
+
+int main() {
+    int num;
+    
+    // Read a number from the user
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Check if the number is a perfect square
+    if (isPerfectSquare(num)) {
+        printf("%d is a perfect square.\n", num);
+    } else {
+        printf("%d is not a perfect square.\n", num);
+    }
+
+    return 0;
+
+p15
+Check if a character is an alphabet.
+#include <stdio.h>
+#include <ctype.h>  // For isalpha() function
+
+int main() {
+    char ch;
+
+    // Ask the user to enter a character
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    // Check if the character is an alphabet using isalpha()
+    if (isalpha(ch)) {
+        printf("%c is an alphabet.\n", ch);
+    } else {
+        printf("%c is not an alphabet.\n", ch);
+    }
+
+    return 0;
+}
+p16.Check if a character is an alphanumeric.
+isalnum() will return true for both uppercase and lowercase alphabetic characters and digits.
+
+#include <stdio.h>
+#include <ctype.h>  // For isalnum() function
+
+int main() {
+    char ch;
+
+    // Ask the user to enter a character
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    // Check if the character is alphanumeric using isalnum()
+    if (isalnum(ch)) {
+        printf("%c is an alphanumeric character.\n", ch);
+    } else {
+        printf("%c is not an alphanumeric character.\n", ch);
+    }
+
+    return 0;
+}
+p17:Check if a character is a digit.
+int main()
+ {
+    char ch;
+
+    // Ask the user to enter a character
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    // Check if the character is a digit using isdigit()
+    if (isdigit(ch)) {
+        printf("%c is a digit.\n", ch);
+    } else {
+        printf("%c is not a digit.\n", ch);
+    }
+
+    return 0;
+	}
+p18:Check if a letter is small case.
+#include <stdio.h>
+#include <ctype.h>  // For islower() function
+
+int main() {
+    char ch;
+
+    // Ask the user to enter a character
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    // Check if the character is a lowercase letter using islower()
+    if (islower(ch)) {
+        printf("%c is a lowercase letter.\n", ch);
+    } else {
+        printf("%c is not a lowercase letter.\n", ch);
+    }
+
+    return 0;
+}
+p19.Check if a year is Leap year
+
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    // Ask the user to enter a year
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    // Check if the year is a leap year
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+
+    return 0;
+}
+p20.Declare 3 character variables and accept values, raining=r sunny=s cloudy=c
+Allow the person to go out only if it is:
+	1. only sunny
+	2. sunny and raining
+
+#include <stdio.h>
+
+int main() {
+    char raining, sunny, cloudy;
+
+    // Prompt the user to enter weather conditions
+    printf("Enter the weather conditions:\n");
+
+    // Accepting weather conditions
+    printf("Is it raining? (Enter 'r' for raining, any other key for not raining): ");
+    scanf(" %c", &raining);  // Use " %c" to handle any leading whitespace
+
+    printf("Is it sunny? (Enter 's' for sunny, any other key for not sunny): ");
+    scanf(" %c", &sunny);
+
+    printf("Is it cloudy? (Enter 'c' for cloudy, any other key for not cloudy): ");
+    scanf(" %c", &cloudy);
+
+    // Check if it is sunny and not cloudy and raining OR sunny and raining
+    if ((sunny == 's' && raining != 'r' && cloudy != 'c') || (sunny == 's' && raining == 'r')) {
+        printf("You can go out!\n");
+    } else {
+        printf("You cannot go out.\n");
+    }
+
+    return 0;
+}
+
+

@@ -1,0 +1,19 @@
+ASSIGNMENTS:01
+
+1. Add the prototypes of the I/P functions which the trainer gave on day1.
+Ans-
+-In C, the input and output functions are primarily used for reading data from the user or 
+from a file and printing data to the screen or writing it to a file.
+ The standard input/output functions are part of the C standard library, 
+ particularly found in the <stdio.h> header file.
+ 
+ Prototypes are listed below:
+ 
+ 1.gets(): used to read a string (space is also part of the i/p)
+ 2.scanf(): used to read formatted string/ Used for input from the console.
+ 3.sscanf(): Similar to sprintf().
+ 4.fscanf(): used to read formatter string from file
+
+
+
+

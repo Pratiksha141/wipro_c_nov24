@@ -1,12 +1,21 @@
+
+//Find sum of Odd placed Even digits in a number//
+
 #include<stdio.h>
-#include<stdlib.h>
+int main()
 {
-    int input_number=atoi(orgd[1]);
+ int sum=0,odd_num=1,num,digit;
+ puts("Enter a no.");
+ scanf("%d",num);
+ while(num!=0)
+ {
+    digit=num%10;
+    num/=10;
+    if(digit == 0 && odd_num==0)
     {
-        int input_number=atoi(orgs[1]);
-    for (int i=1;i<=20;i++)
-    {
-        printf("%d*%02d=%03d\n",input_number,i,input_number*i);
+        sum+=digit;
+    odd_num++;
     }
-    }
+    printf("sum of numbers=%d\n",sum);
+ }
 }

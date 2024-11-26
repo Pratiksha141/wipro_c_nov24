@@ -1,1 +1,2 @@
-void printfiboseries(h)
+void printFiboSeries(int);
+int checkInput(int);

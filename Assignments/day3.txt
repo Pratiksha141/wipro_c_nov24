@@ -1,0 +1,23 @@
+Why an un initialized pointer is called as wild pointer ?
+Ans-
+An uninitialized pointer is called a wild pointer because 
+it points to a random or unpredictable memory location, 
+potentially causing unexpected behavior or errors in a program.
+
+Here’s why:
+
+Random Value: When a pointer is declared but not initialized, 
+it holds an indeterminate value, 
+which means it points to a memory address that is not defined by the programmer.
+ This value is essentially "wild" or unpredictable.
+
+Undefined Behavior: Since the pointer is pointing to a random memory location, 
+dereferencing it can lead to accessing invalid or restricted memory areas,
+ leading to crashes, data corruption, or other erratic behavior.
+ This is a form of undefined behavior in programming.
+
+
+Example:
+
+int* ptr;  // Uninitialized pointer
+*ptr = 10;  // Dereferencing a wild pointer, may cause unpredictable behavior.

@@ -1,0 +1,1691 @@
+CREATE A NEW FOLDER LEARNING: 
+learning > wipro_c_training
+
+Create folder "software" in C drive
+Inside C:\software create new folders:
+	"mingw"
+	"notepad_pp"
+	"vs_code"
+	"git"
+
+Download these msi files (installer files)
+Go to Browser and:
+
+Download mingw:
+Google: "Download mingw"
+From the link: https://sourceforge.net/projects/mingw/
+Click the Green button to download
+
+Download git:
+Google: "Download git"
+From the link: https://git-scm.com/downloads
+Click the Green button to download
+
+Download vs_code:
+Google: "Download vs code"
+From the link: https://code.visualstudio.com/download
+Select and Click on the OS you have on your system
+
+Download notepad++:
+Google: "Download notepad++"
+From the link: https://notepad-plus-plus.org/downloads/
+Click on the version 8.6.7
+
+Now, go to the downloads folder and cut and paste all the installer files (.msi files) and paste them in their respective folders in C:\software
+
+Now, Double click on every installer file and install them.
+
+Steps to download mingw:
+1. Double click installer file
+2. Click Install
+3. Click Continue
+4. Select the 2nd check box mingw-base-32 (mark for installation)
+5. Select the 5th check box mingw-gcc-g++ (mark for installation)
+6. On Left top corner, click Installation then click, apply changes
+7. Now click Apply
+8. Close all windows.
+9. Go to C:\mingw\bin (copy this path and add it to environment variables)
+
+Add to Environment varibales:
+1. Windows search: ENV
+2. Click Edit system environment variables
+3. On top, double click path
+4. Now click new
+5. Paste the path
+6. click ok ok ok
+-------------------------------------------------
+GIT NOTES:
+
+Create GIT account
+Create new repo 
+Create personal access token(PAT)
+Install git
+ 
+use the below command to check if git is available/installed
+git --version
+ 
+the below is the repo URL (domain-name/username/repo-name)
+https://github.com/VidyeshSorte/wipro_c_nov24
+ 
+To download any local repo, use below command
+git clone https://github.com/VidyeshSorte/wipro_c_nov24
+
+To make the configurations while syncing remote repo with local repo use the below two commands(one time activity)
+
+$ git config --global user.name "VidyeshSorte"
+ 
+$ git config --global user.email "vidyeshsorte@gmail.com"
+
+
+Template command to sync remote repo with local repo
+git clone https://PAT@github.com/VidyeshSorte/wipro_c_nov24
+
+To check the current status use below command
+git status
+ 
+To stage the changes (To mark all the files to be updated) from the pwd use the below command. The dot in the command represents current folder (pwd). This command marks all the files that need to be updated in the remote repo.
+$ git add .
+ 
+Below command creates the object that need to be moved from the local machine to the cloud(server)
+$ git commit -m "relevant message"
+ 
+Below command moves the object from the local machine to the git server. However the changes in the remote repo will be first updated to the local repo by running the command: git pull origin main
+$ git push origin main
+ 
+Bewlow command updates the changes in the remote repo to the local repo.
+$ git pull origin main
+
+Steps to Create PAT:
+
+Top right corner, click on your profile picture
+Sroll down and Click settings (left bottom corner)
+Next page, scroll down and click developer settings
+Next page, top right of the page, click tokens classic
+Next page, click generate new token -> selct classic
+Add a Note
+Select Expiry: No expiry
+Do no other changes any where.
+Sroll down the page and click generate token
+Copy the token and mail it to your self
+Note: Do not save the PAT any where in your Repo folder
+---------------------------------------------------
+Once we have created Repo and the PAT, now we shall clone our repo:
+
+Copy the repo URL
+Add the PAT with explained template
+Run the command:
+
+$ git close repo_url_with_pat
+
+Run the 2 config commands
+
+Now, save the c_notex.txt inside repo folder
+Now run the 3 commands to see the changes in remote repo
+
+git add .
+git commit -m "message"
+git push origin main
+
+use git status to keep watching the changes after every command.
+----------------------------
+Hope all participants ahve installed VS CODE
+$ code
+is the command to run the vs code
+
+$ code .
+is the command to run vs code in current path
+------------------------------------------------------------------
+C PROGRAMMING
+
+There is no need of programming if there is no Data
+There is no need of computer if there is no data.
+
+Hence everything revolves around data.
+
+Data:
+Anything that is worth storing or remembering. Data must have implicit meaning.
+IF you cannot figure out the category or domain or entity or the area under which the data is coming from, then it cannot be data.
+
+Data can be categorised as:
+1. Numeric
+2. string
+
+There are many forms of data like, audible sound, images, video etc.
+
+Numeric:
+	1. Numbers only (distinct or descrete)
+	2. Numbers with precision (The decimal part of the number is to only add accuracy to the number)
+string:
+	1. alphabetic
+	2. alphanumeric
+	
+Data in memory is stored in the form:
+ON OFF
+We see on and off as 1 and 0
+Now, we can make combination of 1 and 0s and make patterns
+
+For example, we can say
+110011 as A
+110001 as B
+110101 as C etc,
+
+Now, different individuals and companies may use different patterns.
+How ever if they have to work together, then same pattern is required.
+
+Problems occur when different individuals or companies are working on same project.
+
+Hence we need a STANDARD pattern which vcan be used by majority of people or companies.
+
+Hence, the ASCII character set was introduced.
+This incluses mainly 5 parts:
+1. English upper case letters
+2. English lower case letters
+3. The 10 digits as characters
+4. important 32 symbols
+5. other symbols
+
+There are 256 ASCII characters, and every ASCII character has its own ASCII value which starts from Zero and thus ends with 255.
+Hence the size of any ASCII character is One byte.
+
+Note that in one bit, we can store any of the 2 values 0 or 1
+Thus, in 2 bits we can store 4 different values.
+In 3 bits, 8 different values
+Thus in N bits we can store 2powerN values
+Thus in N+1 bits we can store (2powerN * 2) values
+Thus, with addition of one bit, the range of values we can store doubles.
+
+1 bit:
+0 1
+2 bits:
+00 01 10 11
+3 bits:
+000 001 010 011 100 101 110 111
+
+4 bits is called as a Nibble
+In one Nibble, we can store upto 16 different values.
+Base-2 are called as Binary numbers
+Base-8 are called as Octal numbers
+Base-10 are called as Decimal numbers
+Base-16 are called as Hexa-Decimal numbers
+
+So in one Niblle we can store 1111 which is 15 which is in Hexa-Decimal is 'f' or 'F'
+
+Thus ff = 15 * 16power1 + 15 * 16power0 = 16*15 + 15*1 = 240 + 15 = 255
+567 as decimal number = 5 * 10power2 + 6 * 10power1 + 7 * 10power0 = 5*100 + 6*10 + 7*1 = 500 + 60 + 7 = 567
+
+Pending Topic:
+EVOLUTION OF PROGRAMMING LANGUAGES
+
+Special Characters called as ESCAPE SEQUENCES:
+\n		new line character (line break) ASCII value is 32
+\t		horizontal tab
+\v		vertical tab
+\b		back space
+\a		audible system notification
+\\		to print \
+\"		to print "
+\r		carriage return
+\0		end of string character
+
+DATA TYPES:
+Since much of the data are similar or can be categorized, we have the following basic or primitive DTs in C, namely:
+char	1 byte		Accepts any of the ASCII characters
+int		4 bytes		4 bytes of integer number (by default int is signed int). By default int is long int
+double	8 bytes		Number with precision
+float	4 bytes		A small Number with precion
+Note: The precision is usually of 6 digits by default. However, we can store more accuracy.
+
+MANIPULATORS of DTs:
+	1. Size manipulator: short and long
+short can be applied only to int and short int is 2 bytes
+long can also be applied only to int and long long int is 8 bytes
+	2. Sign Manipulator: By default all number of all DTs have sign. Thus the MSB or LSB (depending on how numbers are stored using either Little Endian or Big Endian) is used as Sign bit.
+	If the MSB is 1 (set) then the number is -ve
+	If the MSB is Zero (not set) then the number is +ve
+
+I/O Functions:
+library: stdio.h
+.h file is header file
+All header files will have only function declarations (prototypes)
+Their respective .c files will have the definitions (implementations)
+Prototype of a function will have 3 things. Return type, function name and the argument list.
+
+C is a procedural programming language (PPL)
+Thus for everything and anything, we have to do/solve it in terms of functions.
+PPL follows Divide and Conquer Technique
+Given a big problem, we divide it into N number of sub problems which are Atomic in nature and we solve each of these sub problems using one function.
+Synonyms of for Function: methods, procedure, behaviour.
+
+C is also Modular language.
+That is, related code or functions are grouped
+For example, all string handling functions are put into string.h
+All mathematical functions are put into math.h
+All I/P functions are put into stdio.h and so on
+Like wise we too (programmers) group the related functions into a files.
+
+I/P Functions:
+
+Note:
+stdin refers to standard input device
+stdout refers to standard o/p device
+stderr refers to standard error device usually stdout itself
+
+getc(): used to read one character from stdin or from file
+int getc(FILE *stream); // Prototype
+char ch = getc(stdin);  // Example
+
+putc(): used to write one character to the stdout or to file
+int putc(char, FILE*);
+putc(ch, stdout);
+
+gets(): used to read a string (space is also part of the i/p)
+
+puts(): used to write a string
+printf(): used to write a formatted string
+scanf(): used to read formatted string
+sprintf(): used to read a string from memory format it and store it back in memory (some other variable or same variable)
+sscanf(): Similar to sprintf()
+fprintf(): Used to write formatted string to file
+fscanf(): used to read formatter string from file
+
+FORMAT SPECIFIERS:
+%c		to print any of the 256 ASCII chars					1 byte
+%d		to print int number in decimal format				4 bytes
+%o		to print int number in octal format					4 bytes
+%x %X   to print int number in hexa-decimal format	4 or 	8 bytes
+%u		to print unsigned int number in decimal format		4 bytes
+%p		to print an address									4 bytes
+%s		to print a string (set of characters which is one data. String must end with end of string character which is \0 character)
+%f		to print float data									4 bytes
+%lf		to print double data								8 bytes
+%ld		to print long long int in decimal format			8 bytes
+--------------------------------------------------------
+DAY2 THURSDAY 21-11-2024
+
+Operators
+Output Formatting
+Type Casting
+Conditional programming
+Ternary Operator
+Switch case
+Loops
+Nested Loops
+Function call Stack
+
+OPERATORS:
+Arithmetic Operators: + - / % *
+
+num1 + num2
+values/numbers/input/operands
+
+1. All Arithmetic operators take 2 operands (All are Binary operators)
+2. The operator is placed in-between the operands (Infix notation)
+num1 num2 + Postfix notation
++ num1 num2 Prefix  notation
+3. Input are numbers and output is also a number
+4. Some operators have lesser precedence (+ - have less precedence than * / %)
+
+result = num1 + num2 * num3
+Here the multiplication is performed 1st (Broadmas rule)
+
+5. In the below statement, num1 - num2 is performed 1st. Thus all Arithmetic operations are performed from left to Right (Associtivity)
+result = num1 - num2 + num3
+
+6. 45 + 5.5
+
+num1 = 45
+num2 = -9
+sum = num1 + num2
+
+The operations can be performed only if the type of data of the operands are same.
+
+Note:
+0.0 is double which is of 8 bytes
+0.0f is float which is of 4 bytes
+
+How Negative numbers are stored in memory:
+
+int num = -23; // Signed integer
+signed int num = -23;
+signed long int num = -23; // MSB bit will be dedicated to store sign of the number.
+If MSB is 1 then the number is -ve. If MSB is 0 then the number is +ve
+
+-23
+23  (absolute of -23)
+10111
+
+0001 0111
+1110 1000
+        1
+1110 1001
+
+-1 * 2(7) + 1 * 2(6) + 1 * 2(5) + 9
+= -128 + 64 + 32 + 9
+= -64 + 41
+= -23
+
+-ve numbers are stored in memory using 2's compliment technique.
+
+RELATIONAL OPERATORS: > < >= <= != ==
+1. All are binary operators
+2. Used with Infix notation
+3. All relational operators have lesser precedence than arithmetic operators but they have higher precedence than logical operators
+4. I/P are numbers. O/P is Boolean
+5. Left to Right associtivity
+
+45 > 7  	true	1
+45 != 45 	false	0
+45 >= 40			1
+45 > 39 is same as 45 >= 40
+n <= 20 is same as n < 21
+
+In the above 2 statements, each of the statements are same.
+That is, what ever we write using >= or <= can be written using > and <
+Thus, it looks as if >= and <= are redundant.
+
+[10, 20] is closed interval. where both end values are included
+(20, 40) is open interval. Here the range is 21 to 39 (end values not included)
+[30, 50) Right open. Range is 30 to 49
+
+n >= 10 and n <= 20           n > 9 and n < 21
+n > 20 and n < 40
+n >= 30 and n < 50
+
+LOGICAL OPERATORS: & && | || !
+
+C1 & C2 & C3  	Here all conditions are always checked
+C1 && C2 && C3	Here if the C1 fails, then remaining conditions are not checked
+
+! is unary operator. All unary operators are to be used before the operand.
+In C, there is no bool DT. Hence true is implecitly converted to 1 and false to 0.
+Also note that all non-zero values incuding -ve numbers are treated as true and only zero is treated as false.
+
+I/P to logical operators is  truth values (boolean)
+O/P is also boolean
+
+Updation Operators: ++ --
+increment and decrement
+Both of these operators have 2 behaviour. Infix and Postfix
+
+Bitwise Operators: & | ^ ~ >> <<
+
+0 0 0 1 0 1 1 1  X
+0 0 0 0 1 1 0 0  Y
+
+0 0 0 0 0 1 0 0  &   4
+
+0 0 0 1 1 1 1 1  |  31
+
+0 0 0 1 1 0 1 1  ^  27
+
+1 1 1 1 0 0 1 1  ~Y
+-128 + 64 + 32 + 16 + 3 = -64 + 51 = -13
+
+
+1   1   0   1   1
+4   3   2   1   0 power 2
+
+X >> 3
+0 0 0 1 0 1 1 1  
+0 0 0 0 1 0 1 1
+0 0 0 0 0 1 0 1
+0 0 0 0 0 0 1 0  2
+
+Y << 2           
+0 0 0 0 1 1 0 0  Y =  8
+0 0 0 1 1 0 0 0  Y = 16
+0 0 1 1 0 0 0 0  Y = 32
+------------------------------------------------------------
+p1
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    int num;
+    float fnum;
+    double dnum;
+    short int snum;
+    long int lnum;
+    long long int llnum;
+    printf("Size of char (ch) = %d \n", sizeof(char));                      // sizeof(ch)
+    printf("Size of int (num) = %d \n", sizeof(num));                       // sizeof(ch)
+    printf("Size of float (fnum) = %d \n", sizeof(float));                  // sizeof(ch)
+    printf("Size of double (dnum) = %d \n", sizeof(double));                // sizeof(ch)
+    printf("Size of short int (snum) = %d \n", sizeof(snum));               // sizeof(ch)
+    printf("Size of long int (lnum) = %d \n", sizeof(lnum));                // sizeof(ch)
+    printf("Size of long long int (llnum) = %d \n", sizeof(long long int)); // sizeof(ch)
+}
+------------------------------------------------------------
+p2
+#include <stdio.h>
+// program to understand bitwise operators
+
+int main()
+{
+    int num1 = 23, num2 = 12, result = 0;
+
+    result = num1 & num2;
+    printf("X & Y = %d \n", result);
+    result = num1 | num2;
+    printf("X | Y = %d \n", result);
+    result = num1 ^ num2;
+    printf("X ^ Y = %d \n", result);
+    result = num1 >> 3; // num1 is immutable (copy of num1 is modified)
+    printf("X >> 3 = %d \n", result);
+    result = num2 << 2; // num2 is immutable (copy of num2 is modified)
+    printf("Y << 2 = %d \n", result);
+}
+------------------------------------------------------------
+p3
+#include <stdio.h>
+// Program to check if a number is Even
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+}
+------------------------------------------------------------
+p4
+#include <stdio.h>
+// Program to check if a number is Even or not.
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+    else
+        printf("%d is not an Even number", inputNum);
+}
+------------------------------------------------------------
+p5
+#include <stdio.h>
+// Program to check if a number is Even or Odd.
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+    else
+        printf("%d is an Odd number", inputNum);
+}
+------------------------------------------------------------
+p6
+#include <stdio.h>
+// Program to print a number in different formats/base.
+
+int main()
+{
+    int num = 79;
+    printf("%d  %i  %o  %x  %X \n", num, num, num, num, num);
+    // 79  79 117  4f  4F
+    int num2 = 0173;
+    printf("%d  %i  %o  %x  %X \n", num2, num2, num2, num2, num2);
+    //     123 123  173 7b  7B
+    int num3 = 0x5d;
+    printf("%d  %i  %o  %x  %X \n", num3, num3, num3, num3, num3);
+    //     94   94  136 5d  5D
+}
+------------------------------------------------------------
+p7
+#include <stdio.h>
+// Program to do formatting on int number.
+int main() {
+    int num = 7955;
+    printf("%d\n", num);     // print num
+    printf("%6d\n", num);    // Allocate 6 character spaces and print num with right allignment
+    printf("%-6d\n", num);   // Allocate 6 character spaces and print num with left allignment
+    printf("%-6d**\n", num); // Allocate 6 character spaces and print num with left allignment and after that print 2 stars
+    printf("%07d\n", num);   // Allocate 6 character spaces and print num with right allignment and in empty spaces fill it with zeroes
+    printf("%3d\n", num);    // Allocate 3 character spaces and print num with right allignment [Here formatting is ignored and data is given priority]
+}
+/*
+7955
+  7955
+7955
+7955  **
+0007955
+7955
+*/
+------------------------------------------------------------
+p8
+#include <stdio.h>
+// Program to do formatting on float number.
+
+int main()
+{
+    float num = 795.907;
+    printf("%f\n", num);     // print num
+    printf("%12f\n", num);   // print num, allocate 12 spaces and right allignment
+    printf("%-14f\n", num);  // print num, allocate 14 spaces and left allignment
+    printf("%014f\n", num);  // print num, allocate 14 spaces and right allignment and fill spaces with zeros
+    printf("%.2f\n", num);   // print only 2 digits after decimal point
+    printf("%08.1f\n", num); // print num, allocate 8 spaces, print 1 digit after decimal point and fill with zeros
+    printf("%-8.1f\n", num); // print num with left allignment, alloctae 8 spaces and 1 digit of precision
+    printf("%05.0f\n", num); // print num with no precision and right allignment
+}
+------------------------------------------------------------
+p9
+#include <stdio.h>
+// Program to do formatting on string data.
+
+int main()
+{
+    char place[16] = "bengaluru";
+    printf("%s\n", place);
+    printf("%12s\n", place);
+    printf("%-11s***\n", place);
+    printf("%.4s\n", place);
+    printf("%5s\n", place);
+    printf("%2.4s", place);
+}
+------------------------------------------------------------
+Type casting (Conversion of data from one DT to another)
+Upcast: Conversion of a lower DT (int) to higher DT (float / double)
+Down cast: Conversion of a higher sized DT to lower sized DT (int to short int or float to int or double to float)
+Implicit Cast: The cast which happens implicitly
+Explicit cast: Where the cast is visible with code
+
+Down cast is more dangerours before there is chance of loss/change of data
+Up cast is not so dangerous yet not good: There is no change or loss of data but more memory will be used.
+
+Casting must be avoided. It is usually design errors.
+------------------------------------------------------------
+p10
+// Program to do understand type casting.
+int main() {
+    int num = 17 / 3;           // No Casting at all
+    printf("%d  %f", num, num); // 5   0.000000
+}
+------------------------------------------------------------
+p11
+
+17 / 3
+Here both numerator 17 and denominator 3, both are integers. When both N and D are integers, then Integer division happens where the quotient is integer.
+So, the o/p is 5
+
+If any of the N or D or both are float or double, then floating point division happens where the quotient may or may not be int always. Mean, to say, we can continue the division by taking decimal point.
+
+int main()
+{
+    float num = 17 / 3;         // One type casting happens. from 5 to 5.0f which is implicit up cast
+    printf("%f  %d", num, num); // 5.000000
+}
+------------------------------------------------------------
+p12
+
+int num = (float)((int) 17.5 / 2.0);
+
+1. 17.5 to 17 (explicit down cast from double to int)
+o/p: 17/2.0
+2. Now, 17 is casted to 17.0 (implicit up cast from int to double)
+o/p: 17.0/2.0 = 8.50000000
+3. 8.5 which is double is casted to float (explicit down cast from double to float)
+4. 8.5f is casted to 8 (implicit down cast from float to int)
+
+int main()
+{
+    int num = (float)((int)17.5 / 2.0);
+    printf("%d", num);
+}
+Ans is 8
+------------------------------------------------------------
+p13
+#include <stdio.h>
+// Program to do understand updation operators.
+int main() {
+    int x = 10, y = 3, z = -1;
+    x++;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 3 -1
+    ++x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 3 -1
+    y = z--;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 -1 -2
+    z = --x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 -1 11
+    x = y++ + ++y;
+    //  -1  + 1
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 0  1  11
+}
+------------------------------------------------------------
+STEPS TO SOLVE A PROBLEM:
+
+HOW TO SOLVE A PROBLEM
+
+1. Understand the problem. Recognise the required data (I/P). Isolate/remove the unwanted information and data. Focus on the relevant information. Accertain what should be the O/P.
+Outcome: We know the I/P, O/P and the relevant information
+
+2. Build the solution using trial and error technique or mathematical formula or using a specific Algorithm. In this step we must not even think of programming.
+OutCome: We know the what is the solution(s)
+
+3. Write the Algorithm. Every step of the algorithm must be simple, unambigious and finite.
+OutCome: We have a clear visible solution as a procedure
+
+4. Write the Fake-code (Pseudocode) 
+OutCome: You have a solution that looks like a code
+
+5. Code it (via the language syntax)
+
+6. Good coding practices, naming standards, documentation, unit-testing, debugging
+
+7. Efficiency of algorithms, Optimization, development, DevOps, Cyber Security, Installation, Maintainance
+-----------------------------------------------------------------------
+p14
+Check if a number is Perfect Square
+
+45  6.7  6  36
+81  9.0  9  81
+40  6.3  6  36
+
+Read N
+ROOT = root(N)
+ROOT = floor(ROOT)
+if ROOT * ROOT is equal to N
+	yes: N is perfect square
+	no:  N is not perfect square
+
+sqrt()
+double sqrt(double);
+	
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    unsigned int inputNumber = 0;
+    int rootNumber = 0;
+    printf("Enter number to check if is perfect square: ");
+    scanf("%u", &inputNumber);
+    rootNumber = (int)sqrt(inputNumber);
+    if (rootNumber * rootNumber == inputNumber)
+        printf("%u is a perfect square", inputNumber);
+    else
+        printf("%u is not a perfect square", inputNumber);
+}
+-----------------------------------------------------------------------
+p21
+Accept average score from the user and print the result as follows:
+0  - 50 Fail
+50 - 80 Second Class
+81 - 95 First class
+96 -100 Distinction
+Also check for invalid score
+
+#include <stdio.h>
+#include <math.h>
+// Program to check if a number if perfect square.
+
+int main()
+{
+    int averagScore = 0;
+    printf("Enter your average score to print result: ");
+    scanf("%d", &averagScore);
+    if (averagScore >= 0 && averagScore <= 50)
+        puts("Your result is Fail");
+    else if (averagScore <= 80)
+        puts("Your result is Second class");
+    else if (averagScore <= 95)
+        puts("Your result is First class");
+    else if (averagScore <= 100)
+        puts("Your result is Distinction");
+    else
+        puts("Invalid score entered");
+}
+-----------------------------------------------------------------------
+p15
+#include <stdio.h>
+#include <ctype.h>
+// Program to check if a character is an alphabet
+
+int main()
+{
+    char ch = '\0';
+    printf("Enter a character to check if it is an alphabet: ");
+    scanf("%c", &ch);
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        puts("Yes! its an alphabet");
+    else
+        puts("No! its not an alphabet");
+    fflush(stdin);
+    printf("Enter a character to check if it is an alphabet: ");
+    scanf("%c", &ch);
+    if (isalpha(ch))
+        puts("Yes! its an alphabet");
+    else
+        puts("No! its not an alphabet");
+}
+-----------------------------------------------------------------------
+p22
+Find smallest among 3 distinct numbers
+
+-----------------------------------------------------------------------
+p23
+Find biggest among 3 distinct numbers using ternary operator
+
+
+#include <stdio.h>
+// Program to find biggest of 2 numbers
+
+int main()
+{
+    int num1 = 0, num2 = 0, nigNum = 0;
+    puts("Enter 2 numbers to find biggest");
+    scanf("%d%d", &num1, &num2);
+    if (num1 > num2)
+        printf("%d is biggest", num1);
+    else if (num2 > num1)
+        printf("%d is biggest", num2);
+    else
+        printf("Both numbers are same");
+}
+------------
+#include <stdio.h>
+// Program to find biggest of 2 numbers
+
+int main()
+{
+    int num1 = 0, num2 = 0, bigNum = 0;
+    puts("Enter 2 numbers to find biggest");
+    scanf("%d%d", &num1, &num2);
+    bigNum = (num1 > num2) ? num1 : num2;
+    printf("%d is biggest", bigNum);
+}
+------------
+#include <stdio.h>
+// Program to find biggest of 3 numbers
+int main() {
+    int num1 = 0, num2 = 0, num3 = 0, smallNum = 0;
+    puts("Enter 3 numbers to find smallest");
+    scanf("%d%d%d", &num1, &num2, &num3);
+    smallNum = (num1 < num2 && num1 < num3) ? num1 : (num2 < num3) ? num2 : num3;
+    printf("%d is smallest", smallNum);
+}
+-----------------------------------------------------------------------
+p24 
+#include <stdio.h>
+// Accept day number from the user and print the event of the college fest
+
+int main() {
+    int dayNumber = 0;
+    puts("Enter the day number to print the event");
+    scanf("%d", &dayNumber);
+    switch(dayNumber) {
+        case 1 : puts("Monday Sports"); break;
+        case 2 : puts("Tuesday Technical"); break;
+        case 3 : puts("Wednesday Cultural"); break;
+        case 4 : puts("Thursday Ethnic"); break;
+        case 5 : puts("Friday Funky"); break;
+        case 6 : puts("Saturday Charity"); break;
+        default: puts("Go back home and sleep");
+    }
+}
+-----------------------------------------------------------------------
+p25
+#include <stdio.h>
+// Show Menu to customer and accept the food-number from the customer and serve him the food.
+
+int main() {
+    int foodNumber = 0;
+    puts("Welcome to our Hotel \"THE TASTE\"");
+    puts("1:Idly-Vada 2:Dosa 3:Poha 4:Alu-Paratha 5:Roti-Sabji. Your choice please");
+    scanf("%d", &foodNumber);
+    switch(foodNumber) {
+        case 1 : puts("Yummy idli-vada"); break;
+        case 2 : puts("Tasty Mysuru Dosa"); break;
+        case 3 : puts("Soft Bhopal Poha"); break;
+        case 4 : puts("Spicy Punjabi Paratha"); break;
+        case 5 : puts("Hot and Sweet Roti-Sabji"); break;
+        default: puts("Sorry we dont have the food you wish");
+    }
+}
+-----------------------------------------------------------------------
+DAY3 23-11-2024 SATURDAY
+LOOPS
+for 		When the number of iterations is known before start of the loop.
+while		When number of iterations is unknown.
+do-while	When number of iterations is unknown, but it is at least one.
+
+
+p26
+restaurant program with nestes switch-case
+#include <stdio.h>
+// Ask the customer if she wish to have Veg or NonVeg and then Show the specific Menu to customer and accept the food-number from the customer and serve her the food.
+
+int main()
+{
+    int foodNumber = 0, foodType = 0, choice = 0;
+    puts("Welcome to our Hotel \"THE TASTE\"");
+    do
+    {
+        puts("1:Veg 2:NonVeg. Your choice please: ");
+        scanf("%d", &foodType);
+        switch (foodType)
+        {
+        case 1:
+            puts("1:Idly-Vada 2:Dosa 3:Poha 4:Alu-Paratha 5:Roti-Sabji. Your choice please");
+            scanf("%d", &foodNumber);
+            switch (foodNumber)
+            {
+            case 1:
+                puts("Yummy idli-vada");
+                break;
+            case 2:
+                puts("Tasty Mysuru Dosa");
+                break;
+            case 3:
+                puts("Soft Bhopal Poha");
+                break;
+            case 4:
+                puts("Spicy Punjabi Paratha");
+                break;
+            case 5:
+                puts("Hot and Sweet Roti-Sabji");
+                break;
+            default:
+                puts("Sorry we dont have the food you wish");
+            }
+            break;
+        case 2:
+            puts("1:ChickenFry 2:MuttonBiryani 3:FishCurry. Your choice please");
+            scanf("%d", &foodNumber);
+            switch (foodNumber)
+            {
+            case 1:
+                puts("Yummy chicken");
+                break;
+            case 2:
+                puts("Tasty biryani");
+                break;
+            case 3:
+                puts("Spicy fish curry");
+                break;
+            default:
+                puts("Sorry we dont serve lizards and snakes");
+            }
+            break;
+        default:
+            puts("Maam, this is Restaurant and not Garden");
+        }
+        puts("Do you wish to have more? Yes:1, No:2. Your choice plz: ");
+        scanf("%d", &choice);
+    } while (choice == 1);
+    puts("Namaste Visit Again");
+}
+------------------------------
+p27
+// program to print Math table of a number till multiples of of 20
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argCount, char *args[])
+{
+    int input_number1 = atoi(args[1]);
+    int input_number2 = atoi(args[2]);
+    for (int i = 1; i <= 20; i++)
+    {
+        printf("%d * %02d = %03d \t %d * %02d = %03d \n", input_number1, i, input_number1 * i, input_number2, i, input_number2 * i);
+    }
+}
+/*
+ 7 * 1 = 7
+ 7 * 2 = 14
+*/
+-----------------------------------------------------------------------
+p28
+Find the biggest and smallest digits in a number
+
+biggest_digit  = 0 4 4 6 7
+smallest_digit = 9 4 3 3 3
+
+576345
+76345
+7634
+
+10) 7634 (763
+    7630
+	   4
+
+10) 763 (76
+    760
+	  3
+
+Read N
+SMALL_DIGIT = 9
+BIG_DIGIT = 0
+TEMP_NUMBER = N
+until N is not 0 do:
+	REMAINDER_DIGIT = N % 10
+	N = N / 10
+	if SMALL_DIGIT > REMAINDER_DIGIT then:
+		SMALL_DIGIT = REMAINDER_DIGIT
+	if BIG_DIGIT < REMAINDER_DIGIT then:
+		BIG_DIGIT = REMAINDER_DIGIT
+print SMALL_DIGIT
+print BIG_DIGIT
+
+Note that the N becomes zero at end of the loop
+
+int main(int argCount, char *args[]) {
+    int input_number = atoi(args[1]);
+    printf("User given number is %d \n", input_number);
+    int small_digit = 9, big_digit = 0, remainder_digit = 0;
+    while (input_number != 0)
+    {
+        remainder_digit = input_number % 10;
+        if (small_digit > remainder_digit)
+            small_digit = remainder_digit;
+        if (big_digit < remainder_digit)
+            big_digit = remainder_digit;
+        input_number = input_number / 10;
+    }
+    printf("Smallest digit = %d, Biggest Digit = %d", small_digit, big_digit);
+}
+----------------------------------------------------------------------
+p29
+Count the number of Even digits in a number
+
+#include <stdio.h>
+#include <stdlib.h>
+// p29 Count the number of Even digits in a number
+
+int countEvenDigits(int n)
+{
+    int countOfEvenDigits = 0, remainderDigit = 0;
+    while (n != 0)
+    {
+        remainderDigit = n % 10;
+        n = n / 10;
+        if (remainderDigit % 2 == 0)
+            countOfEvenDigits++;
+    }
+    return countOfEvenDigits;
+}
+
+int main(int argCount, char *args[])
+{
+    int input_number = atoi(args[1]);
+    printf("User given number is %d \n", input_number);
+    int countOfEvenDigits = countEvenDigits(input_number);
+    printf("Count of Even Digits = %d", countOfEvenDigits);
+}
+----------------------------------------------------------------------
+*p30
+Find sum of Even placed digits in a number
+
+455632
+
+flip=0
+
+sum1=2+6+5
+sum2=3+5+4
+
+4556327
+
+flip=1
+sum1=7+3+5+4
+sum2=2+6+5
+
+After the loop, if flip is 0 then sum of Even placed digits will be in sum1
+After the loop, if flip is 1 then sum of Even placed digits will be in sum2
+After the loop, if flip is 0 then sum of Odd placed digits will be in sum2
+After the loop, if flip is 1 then sum of Odd placed digits will be in sum1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argCount, char *args[])
+{
+    int inputNumber = atoi(args[1]);
+    int sumOfDigits1 = 0, sumOfDigits2 = 0, flip = 0, remainderDigit = 0;
+    printf("User given number is %d \n", inputNumber);
+    while (inputNumber != 0)
+    {
+        remainderDigit = inputNumber % 10;
+        inputNumber = inputNumber / 10;
+        if (flip == 0)
+        {
+            sumOfDigits1 += remainderDigit;
+            flip = 1;
+        }
+        else
+        {
+            sumOfDigits2 += remainderDigit;
+            flip = 0;
+        }
+    }
+    if (flip == 0)
+        printf("Sum of even placed digits is %d", sumOfDigits1);
+    else
+        printf("Sum of even placed digits is %d", sumOfDigits2);
+}
+----------------------------------------------------------------------
+p31
+Find sum of Odd digits in a number
+
+----------------------------------------------------------------------
+p32
+Check if a number is Palindrome
+
+----------------------------------------------------------------------
+p33
+Find sum of Odd placed Even digits in a number
+
+#include <stdio.h>
+#include <stdlib.h>
+// Find sum of Odd placed Even digits in a number
+int main(int argCount, char *args[])
+{
+    int inputNumber = atoi(args[1]);
+    int sumOfDigits1 = 0, sumOfDigits2 = 0, flip = 0, remainderDigit = 0;
+    printf("User given number is %d \n", inputNumber);
+    while (inputNumber != 0)
+    {
+        remainderDigit = inputNumber % 10;
+        inputNumber = inputNumber / 10;
+        if (flip == 0)
+        {
+            if (remainderDigit % 2 == 0)
+                sumOfDigits1 += remainderDigit;
+            flip = 1;
+        }
+        else
+        {
+            if (remainderDigit % 2 == 0)
+                sumOfDigits2 += remainderDigit;
+            flip = 0;
+        }
+    }
+    if (flip == 1)
+        printf("Sum of Odd placed Even digits is %d", sumOfDigits1);
+    else
+        printf("Sum of Odd placed Even digits is %d", sumOfDigits2);
+}
+
+Find sum of Odd placed Odd digits in a number
+Find sum of Even placed Even digits in a number
+Find sum of Even placed Odd digits in a number
+
+#include <stdio.h>
+#include <stdlib.h>
+// Find sum of Even placed Even digits in a number
+int main(int argCount, char *args[])
+{
+    int inputNumber = atoi(args[1]);
+    int sumOfDigits1 = 0, sumOfDigits2 = 0, flip = 0, remainderDigit = 0;
+    printf("User given number is %d \n", inputNumber);
+    while (inputNumber != 0)
+    {
+        remainderDigit = inputNumber % 10;
+        inputNumber = inputNumber / 10;
+        if (flip == 0)
+        {
+            if (remainderDigit % 2 == 0)
+                sumOfDigits1 += remainderDigit;
+            flip = 1;
+        }
+        else
+        {
+            if (remainderDigit % 2 == 0)
+                sumOfDigits2 += remainderDigit;
+            flip = 0;
+        }
+    }
+    if (flip == 0)
+        printf("Sum of Even placed Even digits is %d", sumOfDigits1);
+    else
+        printf("Sum of Even placed Odd digits is %d", sumOfDigits2);
+}
+----------------------------------------------------------------------
+p34a
+Find sum of the series: n + n2 + n3 + .... 10 terms
+
+p34b
+Find sum of the series: 1 - n + n2 - n3 + .... m terms
+
+Odd terms of the series= 1  n2  n4
+Power of Odd terms of series = 0 2 4 6 ....
+
+Even terms of the series      = -n  -n3  -n5
+Power of Even terms of series = 1 3 5 7 ....
+
+How to get Alternate     +1 -1 +1 -1 ....
+(-1) power odd number  = -1
+(-1) power even number = +1
+
+
+for (int i = 1; i <= m; i++) {
+	sumOfTerms += pow(n, i-1) * pow(i, i-1);
+
+p34c
+Find sum of the series: n - n2/3 + n4/5 - n8/7 + .... m terms (1<=n<=3,1<=m<=10)
+----------------------------------------------------------------------
+p34b
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+long long int findSumOFDigits(int n, int m)
+{
+    long long int sumOfTerms = 0;
+    for (int i = 1; i <= m; i++)
+    {
+        sumOfTerms += pow(n, i - 1) * pow(-1, i - 1);
+    }
+    return sumOfTerms;
+}
+
+int main(int argCount, char *args[])
+{
+    int termValue = atoi(args[1]);
+    int numberOfTerms = atoi(args[2]);
+    printf("N value = %d, Number of terms = %d \n", termValue, numberOfTerms);
+
+    long long int sumOfTerms = findSumOFDigits(termValue, numberOfTerms);
+
+    printf("Sum of %d terms is %ld", numberOfTerms, sumOfTerms);
+}
+
+----------------------------------------------------------------------
+Multi File Program
+
+Step1: 
+create a header file (.h file) 
+the .h file will have only function declarations
+the .h file will have respective .c file where the functions are defined.
+
+The functions are to be defined for the solution of the given problem. The functions in a file should be related (modular). Example, all the I/O functions are grouped into stdio.h and all string handling functions are grouped into string.h
+
+For example, in College Management System Application, Assume the entities are:
+Faculty and Student
+So the faculty related functions will be put into faculty.h and these functions are then defined/implemented in faculty.c
+Similarly we will have student.h and student.c
+
+Now, this solution will be later used in the driver code (user code)
+
+
+Prime number example:
+
+Divide 50 from 2 till 25 only, because
+X  any number > X/2 till X-1 cannot divide X
+Actually to check if a number is Prime, diving the number say X, from 2 to ceil(sqrt(X)) is enough
+For example, to check if 50 is Prime, divide 50 from 2 to ceil(sqrt(50)) which is 2 till 8.
+----------------------------------------------------------------------
+fibo.h
+fibo.c
+fiboMain.c
+
+Assume 1st 2 terms of Fibo series as 1 and 2. Print the 1st N terms of Fibo series (N>=2)
+
+
+fn=1
+sn=2
+n=6 (n is minimum 2)
+print fn, sn
+if n==2
+	return
+tn=0
+for i from 3 to N do:
+	tn=fn+sn
+	print tn
+	fn=sn
+	sb=tn
+----------------------------------------------------------------------
+O(n2) Problems:
+1. Find Nth Prime number
+2. Print the Prime numbers between M and N in decreasing order (N>M)
+3. Find Nth term of the series: 1 2 2 3 3 5 5 7 8 11 13 13
+4. Print the following shapes of N lines made up of Stars
+A) Right Angled Triangle
+B) Pyramid (Equilateral Triangle)
+C) Hollow Square
+D) X Shape
+E) X shape inside Hollow Square
+F) Hollow Rhombus
+G) Hexagon (Benzene Ring C6H6)
+
+----------------------------------------------------------------------
+1. Find smallest and biggest element in an Array (Linear Search)
+Discuss best case and worst case efficiencies of Sequential search
+2. Remove duplicates from an Array
+3. Print the number of occurances of each element in an Array.
+4. Sort the Array elements using Bubble Sort. Discuss its efficiency and optimize the algorithm.
+
+----------------------------------------------------------------------
+1. Find the number of palindromes in a given sentence. Must use library functions.
+2. Impliment strip() function (Go remove leading and trailing spaces and tabs) without using library functions.
+3. Implement stricmp() and strncpy() and strstr() and strtok()
+
+----------------------------------------------------------------------
+PROBLEMS:
+1. Implement Stack using Singly LL
+2. Implement Queue using Singly LL
+3. Implement Circular Queue using Doubly LL
+4. Reverse a Singly LL using Recursion
+5. Reverse a Singly LL using Loop
+6. Merge 2 Sorted Singly LL (Merged List must also be sorted)
+7. Add new node at given position. Remove a specific element from a List
+----------------------------------------------------------------------
+DAY4 MONDAY 25-11-2024
+
+A variable declared inside a block of { } is called as local variable and its scope (visibility/accessibility) is only inside that block.
+The best example for a block is function { }
+Like wise we have, if {} else{} loop{} swtitch{} etc.
+
+The variable declared inside a block is visible/accessible only inside that block.
+Further, its life is also inside the block. Thus, when the control comes outseide the block, the variable declared inside the block will deallocated (deleted from memory).
+
+The local variables will have either default value or junk value(compiler dependent). In some compilers like Visual Studio, the variables will be empty util they are initialzed, i.e. the 1st assignment to the variable is considered to be the initialization. This is decided by the compiler. Thus local variable values will be known at compile time.
+
+Now, the variables which are Function arguments(parameters) too are similar to local variables. However the only difference is that, function parameters will get their value only during runtime. And thus their value is not assertained in compile time.
+
+STATIC LOCAL VARIABLE:
+It is also a local variable. Thus it is accessible only inside the block. However, it's life is retained until end of the program.
+Note that, it gets life only once.
+Thus, when the control goes to the declarative statement of a static local variable for the 2nd time onwards, there wont be any memory allocation, because the variable already exists in memory.
+
+GLOBAL VARIABLE:
+A global is one which is declared outside the function (in fact all functions).
+Note that, all functions are global in nature, meaning no function can be defined inside another.
+Thus, a global variable is accessible or visible to all the functions inside the file.
+However, if the functions in other FILES, if they wish to access global variable defined/declared in other file, then we have to do the below 2 things:
+1. include the file in which the global variable is defined
+2. say to the compiler that you wish to use an EXTERNAL variable (variable declared in other file) using the keyword extern
+A global variable has project scope (in all files and all functions can access it) and its life is till end of the program.
+
+STATIC GLOBAL VARIABLE:
+If we wish to have a global variable in a file, but we dont want any other file to access it (functions from other files) then make it static.
+Thus, a static global variable has file scope. And its life is life of the program.
+----------------------------------------------------------------------
+Topics of the day:
+
+1. Terminologies in Functions.
+2. Memory management of a program:
+code area, GDS, Stack area and Heap area
+3. Different Stages of a program:
+4. Storage classes
+5. Function Call Stack
+6. Evolution of Programming langugaes
+7. Pointers
+
+Function Call Stack:
+
+WE all know that the computer has CPU. The CPU has processor. The Processor has ALU, Signal unit and Registers.
+Registers are memory units within the processor.
+There are 2 types of registers
+General purpose and Special purpose
+The general purpose registers can be used to store anything.
+
+However, the Special purpose registers can be used only for specific purpose. Following are the special	purpose registers:
+
+Accumalator: It is used to store intermediate results
+For example, in x+y+z the values of x and y are brought from memory and are stored in registers.
+The x+y value is then store in accumalator which will be later added to z.
+
+IR: Instruction register
+It stores address of the current instruction that is getting executed.
+
+PC: program counter
+It holds address of next instruction to be executed
+
+FP: Frame pointer
+It holds address of the frame of the function which is currently running
+
+SP: It holds address of the top frame in the Stack.
+
+Other than these, we have MAR and MDR also.
+
+Frame: A frame roughly is the memory allocated to a function. Contents of a frame are:
+local variables (if any)
+function arguments (if any)
+addresses of the called functions (callee) (if any)
+return address (if any)
+-----------------------------------------
+DAY5 TUESDAY 26-11-2024
+
+1. Evolution of Programming langugaes
+2. Pointers
+3. Recursive function
+4. Arrays
+
+It all started with Off-On
+The off and on were seen as 0s and 1s
+The Pattern of 0s and 1s were later used to assume the characters which humans work with (alphabets, symbols, digits etc)
+Then for standardization, character sets like ASCII were introduced
+Later human friendly language (HFL) was the need
+Hence the 1st successful HFL was Assembly language
+In Assembly LANGUAGE, Nmemonics were used.
+Like, add, mul, sub, mov, cop
+add x, y
+This will add x and y and store the result in x
+However, Aseembly language was not modular, not procedural and there no libraries.
+Hence professional then started to build languages depending on their requirements, projects and domain.
+Thus, the languages later appeared were domain specific. Like, Fortran which is Formula translation which is suitable only for algebraic and engineering applications.
+COBOL which is good for only Business and Finance Applications.
+
+Here, the problem is the languages cannot be used for other domains. And the engineers are forced to learn new languages for every new domain.
+
+Hence the need was Domain Friendly language.
+
+Modularity:
+The code we define/implement, for real life Applications and software will be huge. Hence proper organising and arranging the code is very much necessary. Thus grouping the code into files and folders or packages or modules were intoduced.
+
+Procedural:
+As we know now that we solve very big applications that have huge amounts of code, the given big problem must be divided and then conquered.
+
+Thus the big problem is divided into smaller sized problems (1st they are divided in terms of entities and later in terms of functionalities).
+
+For solving this smaller sized problem (which must atomic in nature and must represent a real life functionality) we difine a procedure/behaviour/function/definition which is the implementation.
+
+Thus a function solves an atomic real life problem (business rule)
+A function/procedure that solves only one problem is said to be HIGH COHESIVE
+The functions/procedures that communicate to each other and thus solving the problems are said to be LOOSELY-COUPLED solution.
+
+If a function/instruction/program/class etc.. solves 2 or more problems then it is said to be LESS/LOW COHESIVE and these functions/etc. leads to TIGHTLY COUPLED SOLUTIONS.
+
+Thus, High Cohesion leads to Loose Coupling
+Low Cohesion leads to Tight Coupling
+
+The low cohesive functions/methods naturally become less usable.
+
+In 1960s, the compitition and hunt for programming languages were on extreme rise.
+Simula67 was a OOPL which came with the concept called as Class
+This was later used by almost all OOPLs
+
+Here, class is to implement a real life entity from any domain.
+Note that the purpose of an OOPL is to make the language domain friendly.
+
+Lets take the banking domain 
+Entities are:
+account 
+transaction
+
+class Account
+	acc_num
+	balance
+	type
+	name
+	phone_number
+	
+	create()
+	delete()
+	freeze()
+	modify()
+	search()
+	list()
+	
+class Transaction
+	id
+	acc_num
+	type
+	datetime
+	amount
+	
+	deposit()
+	withdraw()
+	change_pin()
+	mini_stmt()
+	long_stmt()
+	
+Domain: Telecom
+Entity: Call
+
+class PhoneCall
+	imsi
+	imei
+	location_id
+	duration
+	datetime
+	callee_number
+	
+	makeCall()
+	dropCall()
+	addCall()
+	holdCall()
+	mergeCall()
+	
+The Birth of C and Unix:
+1960s
+
+All the business-men they got to know that it is not possible to do business without using computer.
+In other words, computers help business to improve.
+
+But to use a computer we need minimum software and Apps and these put together are called OS.
+
+So, the need was a good OS.
+
+In the competition of building an OS, AT & T Bell Labs too said, they will build an OS which is multi programming and multi user.
+
+They started by 1961
+2 years they took to build a language named B
+It did not do well
+Another 3 years they took to build a new language named BCPL
+They thought it was good, so using BCPL, they built Multix OS
+Later in 9167, Danies Ritchie handled the team
+So he changed the language BCPL to C which came in 1970
+Using C, they built and transalated Multix to Unix
+So, in 1972, a wonderful language C and a extremely powerful OS unix were built.
+They were built BY THE PROFESSIONALS FOR THE PROFESSIONALS.
+
+C was aqccepted widely because:
+1. Easy to use
+2. Modular and procedural
+3. Memory efficient (Stack based) and DMA is there
+4. Data binding can be done using structure
+5. Can be used for developing all kind of software
+6. domain friendly
+7. Very fast at runtime
+8. Syncs well with different levels of Development
+
+Using C, C++ was built, C with Classes language was built by Apple,
+Java was built after C++
+
+Unix:
+HP UX is Unix
+Apple Mac OS is Unix
+Linux is Unix
+IBM AIX is unix
+SUN Microsystems Solaris is Unix
+ZoS is also built on Unix
+Android uses the same Unix Architecture
+
+Birth Of C++:
+When C was built, everything looked so great.
+But though the language is so good, but the startegy is not good.
+
+Once a software is built, it undergoes lot of changes.
+Hence we need a language that is useful to build the software in different levels and also must allow modifications easily.
+
+Hence the answer is C++
+Bjarne Stroustrap used Inheritance to build C++
+
+C++ is Increment to C
+The increment is OOP concepts/features
+
+Thus C++ = C + OOP
+Thus, C is not disturbed at all while building C++
+
+To overcome the short comings of C++, James Golsling built Java in 1990s
+
+Windows
+Android
+FS development tech Stack
+AI
+-----------------------------------------------------------------
+POINTERS:
+
+Unary &
+"Address of"
+It can be applied only to a variable. And we get the address of the variable.
+Pointers are also variables and thus we can apply & to pointers as well.
+
+Unary *
+"De-referencing" or "value-at"
+It can be applied only to an address. And we get the value present in that address.
+Pointers hold address, and thus we can apply * to pointers as well.
+We always de-reference (fetch) the complete size of a variable.
+
+int num = 50;
+A number like 'num' whose value is 50, is just a nunber. It has no unit or property.
+However, an address always has a property called "LENGTH/SIZE of the DT" property.
+
+The size of a pointer irrespective of its DT including structure types is always same for a given OS. 
+We observed that the size of a pointer on windows is 4 bytes and on unix/linux is 8 bytes.
+
+A pointer of DT X* can point to a variable of only type X
+
+TYPES OF POINTERS:
+Normal pointer:
+A pointer pointing to an existing variable of proper data type. Thus, the pointer can be used to access the variable.
+
+NULL pointer: A pointer whose value is NULL. It means, the pointer is not pointing to any variable.
+
+const pointer:
+	1. Pointer to a constant address: A pointer using which we cannot modify the data of the variable to which the pointer is pointing to. However, the pointer can point to some other variable.
+	2. constant pointer: A pointer which is pointing to a variable and it can modify the data of the variable. But it cannot point to any other variable.
+	3. Pointer is both ways constant: It cannot point to any other variable nor it can modify the value of the variable to which it is pointing to.
+
+dangling pointer: A pointer which is still holding address of the memory location which is de-allocated.
+The memory is de-allocated, but the pointer is still holding that address.
+
+wild pointer: 
+An un-initialized pointer is called as wild pointer.
+------------------------------------------------------------------------
+ARRAY:
+An Array was 1st introduced to bring down the number of names we have to create.
+Example, if we have to store 500 values then we need 500 variables. But handling or comprehending 500 names is too difficult.
+Hence the array was introduced where irrespective of number of values (variables) we use only one name.
+
+We use the subscript operator to create and use an Array.
+float ages[25];
+
+* Here we can store 25 values, all of type float in the array ages.
+* All the 25 values will be stored in continuous memory locations. Thus there is no gap between any 2 consecutive elements of the array.
+* The size of the array is fixed at the time of its creation and it cannot be modified later.
+* Since the size of an array is fixed, the array is an Memory in-efficient data structure.
+* Array is an data structure because all the elements of the array are arranged.
+* We call something as data structure when the data in memory is not just stored but also arranged (structured/organised) in a specific form. This specific form helps in achieving either time efficiency or space efficiency or simplicity.
+* Time taken to access any element in an array is almost same. This is because how the array is implemented. Hence Array is Time efficient DS. The time taken to access an element is also called as Look-Up and its efficiency is O(1), that is one unit time.
+* An Array is very easy to use and very commonly used where ever the size is smaller and predictable.
+* An Array is implemented using pointer and pointer arithmetic
+
+POINTER ARITHMETIC:
+Any arithmetic that involves an address is called as pointer arithmetic
+The only possible pointer arithmetic are:
+address + number 	is an address
+address - number 	is an address
+address - address	is a number (This happens with the addresses of any 2 elements of an array to know the number of elements in between these 2 addresses)
+
+int array1[10] = { 0 }; // all elements will be zero
+int array2[] = {2, 4, 5, 8, 9}; // size is taken automatically
+int array3[10] = {20, 5, 9, 11, 0, -2}; // remaining 4 elements will be zero. But this is a bad way of initializing the array.
+When we initialize an array, it is better not to mention its size.
+
+* A 2D array is actually 1D array in memory/physically
+* Name of an array is always address of the 1st element in the array.
+* Thus, name of the array + 1 will be the address of 2nd element in the array. 
+* When we apply * to name of the 1D array, then we get the value of 1st element of the array.
+* When we apply & to the name of the array, it behaves like address of the whole array. Thus, &array+1 will give the address of next 1D array
+* The index of an array starts from 0
+* The last index of an array is size-1
+
+Problems on Arrays:
+1. Find the smallest and biggest elements of the array of size N which is given by user (array is of type double)
+2. Find the frequesvy of an element of user choice in an raay of size N which is also given user (array is of type int)
+3. Reverse an array of size N of type float
+4. Remove duplicate elements in an array. After removal, the position of the removed elements must not be empty.
+
+&arr	Address of the 1D Array
+arr		Address of 1st element in the Array
+*arr	Value of 1st element in the 1D Array
+
+&arr+1	Address of next 1D Array of of size 6 of type double
+arr+1	Address of 2nd element in the Array
+*arr+1	Value of 1st element + 1
+
+2D ARRAY IMPLEMENTATION
+&arr	Address of the entire 2D Array
+arr		Address of 1st Row (1D Array) in the 2D Array
+*arr	Address of 1st element in the 1st Row of the 2D Array
+**arr	Value of 1st element in the 1st Row of the 2D Array
+
+&arr+1	Address of next 2D Array of size 12 elements of type float
+arr+1	Address of 2nd Row in the 2D Array
+*arr+1	Address of 2nd element in the 1st Row
+**arr+1	Value of 1st element of 1st Row + 1
+--------------------------------------------------------
+int array[]; // array of integers
+int* array[]; // array of integer pointers
+char array[]; // array of characters
+char* array[]; // array of character pointers
+
+RECURSIVE FUNCTION:
+A function that calls itself
+A function which is both the calling function and the called function
+
+A function when it calls itself, it repeats.
+For every function call, we know, there is a frame created in the runtime.
+Thus, call to any function in runtime creates/uses extra memory.
+Thus, a recursive call utilizes memory for the frame.
+
+Aslo, we know that the PC content should be stored in the frame as RA and then the frame is pushed on the Stack and SP is incremented, etc.
+Thus recursive call or a function call need time to do the things implicitly.
+Hence function calls should be avoided.
+
+Now, w.r.t. recursive functions, there must be some exit to the recursive calls by happening.
+Otherwise, the Call-Stack keeps growing and it will Overflow at some point of time.
+Hence a condition is always necessary in a recursive function to stop the recursive call at some point of time.
+
+When ever we can solve a problem easily using loop, it is ignorance to use recursion.
+
+PROBLEMS ON RECURSIVE FUNCTIONS:
+1. Find factorial of a number using recursion. (Bad Idea)
+2. Find sum of digits of a number
+3. Find smallest number in an array of size N
+4. Print the Fibo series of N terms (1st 2 terms are 1 and 2)
+
+---------------------------------------------------
+Find sum of 2 matrices
+Find the transpose of a matrix
+Find product of 2 matrices
+find sum of the total score of all players
+
+
+When we pass an array to a function:
+main() {
+	int arr[] = {1, 2, 5, 8, 10};
+	my_function(arr);
+}
+
+my_function(int* ptr) { }   // ptr holds address of an int
+my_function(int ptr[]) { }  // ptr holds address of an int array
+my_function(int ptr[5]) { }// ptr holds address of an int array of size 5
+--------------------------------------
+When we pass a 2D array to a function:
+main() {
+	int arr[][] = { {4, 7, 9}, {1, 2, 5} };
+	my_function(arr);
+}
+
+my_function(int** ptr) { }   // ptr here is pointer to a pointer of type int*
+my_function(int* ptr[]) { }  // ptr is a pointer to an array of int pointers
+my_function(int* ptr[5]) { }// ptr is a pointer to an array of size 5, each of which are int pointers
+my_function(int* ptr[2][11]) { }// ptr is a pointer to a 2D array of 2 rows and 11 columns
+
+
+----------------------------
+JERSY-NUMBER	RUNCS-SCORED
+----------------------------
+123				45
+ 31				99
+  7				08
+ 32				28
+777				87

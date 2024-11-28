@@ -14,6 +14,8 @@ void printFiboSeries(int n)
     printf("%d   %d   ", firstNumber, secondNumber);
     if (n == 2)
         return;
+
+    // printf("%d", size); Error Because we are trying to access local variable of some other function.
     for (int i = 3; i <= n; i++)
     {
         thirdNumber = firstNumber + secondNumber;
@@ -21,4 +23,5 @@ void printFiboSeries(int n)
         firstNumber = secondNumber;
         secondNumber = thirdNumber;
     }
+    // printf("%d", i); Life of 'i' ends where for() ends.
 }

@@ -1,0 +1,289 @@
+CREATE A NEW FOLDER LEARNING: 
+learning > wipro_c_training
+
+Create folder "software" in C drive
+Inside C:\software create new folders:
+	"mingw"
+	"notepad_pp"
+	"vs_code"
+	"git"
+
+Download these msi files (installer files)
+Go to Browser and:
+
+Download mingw:
+Google: "Download mingw"
+From the link: https://sourceforge.net/projects/mingw/
+Click the Green button to download
+
+Download git:
+Google: "Download git"
+From the link: https://git-scm.com/downloads
+Click the Green button to download
+
+Download vs_code:
+Google: "Download vs code"
+From the link: https://code.visualstudio.com/download
+Select and Click on the OS you have on your system
+
+Download notepad++:
+Google: "Download notepad++"
+From the link: https://notepad-plus-plus.org/downloads/
+Click on the version 8.6.7
+
+Now, go to the downloads folder and cut and paste all the installer files (.msi files) and paste them in their respective folders in C:\software
+
+Now, Double click on every installer file and install them.
+
+Steps to download mingw:
+1. Double click installer file
+2. Click Install
+3. Click Continue
+4. Select the 2nd check box mingw-base-32 (mark for installation)
+5. Select the 5th check box mingw-gcc-g++ (mark for installation)
+6. On Left top corner, click Installation then click, apply changes
+7. Now click Apply
+8. Close all windows.
+9. Go to C:\mingw\bin (copy this path and add it to environment variables)
+
+Add to Environment varibales:
+1. Windows search: ENV
+2. Click Edit system environment variables
+3. On top, double click path
+4. Now click new
+5. Paste the path
+6. click ok ok ok
+-------------------------------------------------
+GIT NOTES:
+
+Create GIT account
+Create new repo 
+Create personal access token(PAT)
+Install git
+ 
+use the below command to check if git is available/installed
+git --version
+ 
+the below is the repo URL (domain-name/username/repo-name)
+https://github.com/VidyeshSorte/wipro_c_nov24
+ 
+To download any local repo, use below command
+git clone https://github.com/VidyeshSorte/wipro_c_nov24
+
+To make the configurations while syncing remote repo with local repo use the below two commands(one time activity)
+
+$ git config --global user.name "VidyeshSorte"
+ 
+$ git config --global user.email "vidyeshsorte@gmail.com"
+
+
+Template command to sync remote repo with local repo
+git clone https://PAT@github.com/VidyeshSorte/wipro_c_nov24
+
+To check the current status use below command
+git status
+ 
+To stage the changes (To mark all the files to be updated) from the pwd use the below command. The dot in the command represents current folder (pwd). This command marks all the files that need to be updated in the remote repo.
+$ git add .
+ 
+Below command creates the object that need to be moved from the local machine to the cloud(server)
+$ git commit -m "relevant message"
+ 
+Below command moves the object from the local machine to the git server. However the changes in the remote repo will be first updated to the local repo by running the command: git pull origin main
+$ git push origin main
+ 
+Bewlow command updates the changes in the remote repo to the local repo.
+$ git pull origin main
+
+Steps to Create PAT:
+
+Top right corner, click on your profile picture
+Sroll down and Click settings (left bottom corner)
+Next page, scroll down and click developer settings
+Next page, top right of the page, click tokens classic
+Next page, click generate new token -> selct classic
+Add a Note
+Select Expiry: No expiry
+Do no other changes any where.
+Sroll down the page and click generate token
+Copy the token and mail it to your self
+Note: Do not save the PAT any where in your Repo folder
+---------------------------------------------------
+Once we have created Repo and the PAT, now we shall clone our repo:
+
+Copy the repo URL
+Add the PAT with explained template
+Run the command:
+
+$ git close repo_url_with_pat
+
+Run the 2 config commands
+
+Now, save the c_notex.txt inside repo folder
+Now run the 3 commands to see the changes in remote repo
+
+git add .
+git commit -m "message"
+git push origin main
+
+use git status to keep watching the changes after every command.
+----------------------------
+Hope all participants ahve installed VS CODE
+$ code
+is the command to run the vs code
+
+$ code .
+is the command to run vs code in current path
+------------------------------------------------------------------
+C PROGRAMMING
+
+There is no need of programming if there is no Data
+There is no need of computer if there is no data.
+
+Hence everything revolves around data.
+
+Data:
+Anything that is worth storing or remembering. Data must have implicit meaning.
+IF you cannot figure out the category or domain or entity or the area under which the data is coming from, then it cannot be data.
+
+Data can be categorised as:
+1. Numeric
+2. string
+
+There are many forms of data like, audible sound, images, video etc.
+
+Numeric:
+	1. Numbers only (distinct or descrete)
+	2. Numbers with precision (The decimal part of the number is to only add accuracy to the number)
+string:
+	1. alphabetic
+	2. alphanumeric
+	
+Data in memory is stored in the form:
+ON OFF
+We see on and off as 1 and 0
+Now, we can make combination of 1 and 0s and make patterns
+
+For example, we can say
+110011 as A
+110001 as B
+110101 as C etc,
+
+Now, different individuals and companies may use different patterns.
+How ever if they have to work together, then same pattern is required.
+
+Problems occur when different individuals or companies are working on same project.
+
+Hence we need a STANDARD pattern which vcan be used by majority of people or companies.
+
+Hence, the ASCII character set was introduced.
+This incluses mainly 5 parts:
+1. English upper case letters
+2. English lower case letters
+3. The 10 digits as characters
+4. important 32 symbols
+5. other symbols
+
+There are 256 ASCII characters, and every ASCII character has its own ASCII value which starts from Zero and thus ends with 255.
+Hence the size of any ASCII character is One byte.
+
+Note that in one bit, we can store any of the 2 values 0 or 1
+Thus, in 2 bits we can store 4 different values.
+In 3 bits, 8 different values
+Thus in N bits we can store 2powerN values
+Thus in N+1 bits we can store (2powerN * 2) values
+Thus, with addition of one bit, the range of values we can store doubles.
+
+1 bit:
+0 1
+2 bits:
+00 01 10 11
+3 bits:
+000 001 010 011 100 101 110 111
+
+4 bits is called as a Nibble
+In one Nibble, we can store upto 16 different values.
+Base-2 are called as Binary numbers
+Base-8 are called as Octal numbers
+Base-10 are called as Decimal numbers
+Base-16 are called as Hexa-Decimal numbers
+
+So in one Niblle we can store 1111 which is 15 which is in Hexa-Decimal is 'f' or 'F'
+
+Thus ff = 15 * 16power1 + 15 * 16power0 = 16*15 + 15*1 = 240 + 15 = 255
+567 as decimal number = 5 * 10power2 + 6 * 10power1 + 7 * 10power0 = 5*100 + 6*10 + 7*1 = 500 + 60 + 7 = 567
+
+Pending Topic:
+EVOLUTION OF PROGRAMMING LANGUAGES
+
+Special Characters called as ESCAPE SEQUENCES:
+\n		new line character (line break) ASCII value is 32
+\t		horizontal tab
+\v		vertical tab
+\b		back space
+\a		audible system notification
+\\		to print \
+\"		to print "
+\r		carriage return
+
+DATA TYPES:
+Since much of the data are similar or can be categorized, we have the following basic or primitive DTs in C, namely:
+char	1 byte		Accepts any of the ASCII characters
+int		4 bytes		4 bytes of integer number (by default int is signed int). By default int is long int
+double	8 bytes		Number with precision
+float	4 bytes		A small Number with precion
+Note: The precision is usually of 6 digits by default. However, we can store more accuracy.
+
+MANIPULATORS of DTs:
+	1. Size manipulator: short and long
+short can be applied only to int and short int is 2 bytes
+long can also be applied only to int and long long int is 8 bytes
+	2. Sign Manipulator: By default all number of all DTs have sign. Thus the MSB or LSB (depending on how numbers are stored using either Little Endian or Big Endian) is used as Sign bit.
+	If the MSB is 1 (set) then the number is -ve
+	If the MSB is Zero (not set) then the number is +ve
+
+I/O Functions:
+library: stdio.h
+.h file is header file
+All header files will have only function declarations (prototypes)
+Their respective .c files will have the definitions (implementations)
+Prototype of a function will have 3 things. Return type, function name and the argument list.
+
+C is a procedural programming language (PPL)
+Thus for everything and anything, we have to do/solve it in terms of functions.
+PPL follows Divide and Conquer Technique
+Given a big problem, we divide it into N number of sub problems which are Atomic in nature and we solve each of these sub problems using one function.
+Synonyms of for Function: methods, procedure, behaviour.
+
+C is also Modular language.
+That is, related code or functions are grouped
+For example, all string handling functions are put into string.h
+All mathematical functions are put into math.h
+All I/P functions are put into stdio.h and so on
+Like wise we too (programmers) group the related functions into a files.
+
+I/P Functions:
+
+Note:
+stdin refers to standard input device
+stdout refers to standard o/p device
+stderr refers to standard error device usually stdout itself
+
+getc(): used to read one character from stdin or from file
+int getc(FILE *stream); // Prototype
+char ch = getc(stdin);  // Example
+
+putc(): used to write one character to the stdout or to file
+int putc(char, FILE*);
+putc(ch, stdout);
+
+gets(): used to read a string (space is also part of the i/p)
+
+
+puts()
+printf()
+scanf()
+sprintf()
+sscanf()
+fprintf()
+fscanf()
